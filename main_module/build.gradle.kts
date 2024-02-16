@@ -42,6 +42,9 @@ dependencies {
     implementation (project(":feature_profile"))
     implementation (project(":feature_stocks"))
 
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.2")
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")

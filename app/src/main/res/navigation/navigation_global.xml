@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_global"
+    app:startDestination="@id/registrationFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.loves2spooge.feature_registration.RegistrationFragment"
+        android:label="RegistrationFragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.loves2spooge.main_module.MainFragment"
+        android:label="MainFragment" />
+</navigation>
