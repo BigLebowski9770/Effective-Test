@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/mainFeatureFragment">
+
+    <fragment
+        android:id="@+id/mainFeatureFragment"
+        android:name="com.loves2spooge.feature_main.MainFeatureFragment"
+        android:label="MainFeatureFragment" />
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.loves2spooge.feature_calatog.CatalogFragment"
+        android:label="CatalogFragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.loves2spooge.feature_cart.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/stocksFragment"
+        android:name="com.loves2spooge.feature_stocks.StocksFragment"
+        android:label="StocksFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.loves2spooge.feature_profile.ProfileFragment"
+        android:label="ProfileFragment" />
+</navigation>

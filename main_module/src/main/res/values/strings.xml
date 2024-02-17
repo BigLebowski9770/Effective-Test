@@ -1,0 +1,9 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_main">Главная</string>
+    <string name="text_catalog">Каталог</string>
+    <string name="text_cart">Корзина</string>
+    <string name="text_stocks">Скидки</string>
+    <string name="text_profile">Профиль</string>
+</resources>

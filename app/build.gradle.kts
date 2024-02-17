@@ -44,8 +44,12 @@ dependencies {
     implementation (project(":feature_main"))
     implementation (project(":feature_profile"))
     implementation (project(":feature_stocks"))
+    implementation (project(":feature_registration"))
 
     implementation (project(":main_module"))
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.2")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
