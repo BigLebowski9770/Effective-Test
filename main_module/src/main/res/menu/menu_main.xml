@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainFeatureFragment"
+        android:icon="@drawable/ic_main"
+        android:title="@string/text_main" />
+    <item
+        android:id="@+id/catalogFragment"
+        android:icon="@drawable/ic_catalog"
+        android:title="@string/text_catalog" />
+
+    <item
+        android:id="@+id/cartFragment"
+        android:icon="@drawable/ic_cart"
+        android:title="@string/text_cart" />
+
+    <item
+        android:id="@+id/stocksFragment"
+        android:icon="@drawable/ic_stocks"
+        android:title="@string/text_stocks" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/text_profile" />
+</menu>
