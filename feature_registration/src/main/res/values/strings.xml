@@ -1,4 +1,6 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agreement1">Нажимая кнопку "Войти", Вы принимаете</string>
+    <string name="agreement2">условия программы лояльности</string>
 </resources>

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.loves2spooge.feature_registration.RegistrationFragment"
+        android:name="com.loves2spooge.feature_registration.presentation.fragmen.RegistrationFragment"
         android:label="RegistrationFragment" >
         <action
             android:id="@+id/action_registrationFragment_to_mainFragment"

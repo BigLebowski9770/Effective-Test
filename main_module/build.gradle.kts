@@ -36,6 +36,8 @@ dependencies {
 
     implementation (project(":navigation"))
 
+    implementation (project(":core"))
+
     implementation (project(":feature_catalog"))
     implementation (project(":feature_cart"))
     implementation (project(":feature_main"))

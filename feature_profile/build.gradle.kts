@@ -36,6 +36,8 @@ dependencies {
 
     implementation (project(":navigation"))
 
+    implementation (project(":core"))
+
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.2")
 
