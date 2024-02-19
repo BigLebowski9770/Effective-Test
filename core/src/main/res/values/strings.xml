@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_input_main">Вход</string>
+
+    <string name="text_main">Главная</string>
+    <string name="text_catalog">Каталог</string>
+    <string name="text_cart">Корзина</string>
+    <string name="text_stocks">Скидки</string>
+    <string name="text_profile">Профиль</string>
+
+    <string name="text_first_name">Имя</string>
+    <string name="text_last_name">Фамилия</string>
+    <string name="text_phone_number">Номер телефона</string>
+    <string name="text_input_button">Войти</string>
+</resources>
