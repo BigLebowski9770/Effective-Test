@@ -50,21 +50,13 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
         registrationComponent.inject(this)
 
         setUI()
+        correctInputFirstLastName(buttonClearFirstName, inputTextFirstName)
+        correctInputFirstLastName(buttonClearLastName, inputTextLastName)
+        correctInputPhoneNumber(buttonClearPhoneNumber, inputPhoneNumber)
         clearField(buttonClearFirstName, inputTextFirstName)
         clearField(buttonClearLastName, inputTextLastName)
         clearField(buttonClearPhoneNumber, inputPhoneNumber)
         goToMainFragment()
-
-        val firstName =
-            correctInputFirstLastName(buttonClearFirstName, inputTextFirstName).toString()
-
-        val lastName =
-            correctInputFirstLastName(buttonClearLastName, inputTextLastName).toString()
-
-        val phoneNumber =
-            correctInputPhoneNumber(buttonClearPhoneNumber, inputPhoneNumber).toString()
-
-        registrationViewModel.setUserData(firstName, lastName, phoneNumber)
     }
 
     @SuppressLint("CommitPrefEdits")
@@ -93,6 +85,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
         inputPhoneNumber = requireActivity().findViewById(R.id.input_phone_number)
         buttonClearPhoneNumber = requireActivity().findViewById(R.id.button_delete_phone_number)
         buttonInput = requireActivity().findViewById(R.id.button_input)
+        buttonInput.isEnabled = false
     }
 
     private fun clearField(buttonClear: ImageButton, field: EditText) {
@@ -122,7 +115,10 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
                 }
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+//                buttonInput.isClickable = text.toString().isNotBlank()
+                buttonInput.isEnabled = text.toString().isNotEmpty()
+            }
         })
     }
 
@@ -154,7 +150,10 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
                 }
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+//                buttonInput.isClickable = number.toString().isNotBlank()
+                buttonInput.isEnabled = number.toString().isNotEmpty()
+            }
         })
     }
 }

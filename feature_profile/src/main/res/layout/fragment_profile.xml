@@ -89,6 +89,7 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/ll_with_favorites"
         android:layout_width="match_parent"
@@ -97,6 +98,8 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/background_for_cards"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,6 +161,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_go_favourites_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -165,7 +169,6 @@
             android:src="@drawable/ic_arrow_input" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/ll_with_stores"
@@ -395,15 +398,15 @@
         android:id="@+id/button_output"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/background_for_cards"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/background_for_cards"
         android:text="@string/text_output_button"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
