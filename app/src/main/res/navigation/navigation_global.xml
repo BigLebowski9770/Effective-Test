@@ -15,5 +15,9 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.loves2spooge.main_module.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_registrationFragment2"
+            app:destination="@id/registrationFragment" />
+    </fragment>
 </navigation>

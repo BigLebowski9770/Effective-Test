@@ -70,7 +70,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     @SuppressLint("CommitPrefEdits")
     private fun goToMainFragment() {
         buttonInput.setOnClickListener {
-            val firstName = inputPhoneNumber.text.toString()
+            val firstName = inputTextFirstName.text.toString()
             val lastName = inputTextLastName.text.toString()
             val phoneNumber = inputPhoneNumber.text.toString()
             val sharedPreferences =
