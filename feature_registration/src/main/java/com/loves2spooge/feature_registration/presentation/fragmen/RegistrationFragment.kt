@@ -1,10 +1,10 @@
 package com.loves2spooge.feature_registration.presentation.fragmen
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
-import android.text.InputFilter
 import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
@@ -19,6 +19,7 @@ import com.loves2spooge.feature_registration.presentation.viewmodel.Registration
 import com.loves2spooge.feature_registration.presentation.viewmodel.RegistrationViewModelFactory
 import com.loves2spooge.navigation.navigate
 import javax.inject.Inject
+
 
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
 
@@ -52,7 +53,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
         clearField(buttonClearFirstName, inputTextFirstName)
         clearField(buttonClearLastName, inputTextLastName)
         clearField(buttonClearPhoneNumber, inputPhoneNumber)
-        goToMainFragment(buttonInput)
+        goToMainFragment()
 
         val firstName =
             correctInputFirstLastName(buttonClearFirstName, inputTextFirstName).toString()
@@ -64,17 +65,22 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
             correctInputPhoneNumber(buttonClearPhoneNumber, inputPhoneNumber).toString()
 
         registrationViewModel.setUserData(firstName, lastName, phoneNumber)
-
-        buttonInput.isClickable = !(
-                firstName.isEmpty() ||
-                        lastName.isEmpty() ||
-                        phoneNumber.isEmpty())
-
     }
 
-    private fun goToMainFragment(button: Button) {
-
-        button.setOnClickListener {
+    @SuppressLint("CommitPrefEdits")
+    private fun goToMainFragment() {
+        buttonInput.setOnClickListener {
+            val firstName = inputPhoneNumber.text.toString()
+            val lastName = inputTextLastName.text.toString()
+            val phoneNumber = inputPhoneNumber.text.toString()
+            val sharedPreferences =
+                requireContext().getSharedPreferences("UserData", Context.MODE_PRIVATE)
+            sharedPreferences.edit().apply {
+                putString("firstName", firstName)
+                putString("lastName", lastName)
+                putString("phoneNumber", phoneNumber)
+                apply()
+            }
             navigate(R.id.action_registrationFragment_to_mainFragment)
         }
     }
@@ -117,17 +123,6 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
             }
 
             override fun afterTextChanged(s: Editable?) {}
-        })
-
-        text.filters = arrayOf(InputFilter { source, start, end, dest, dstart, dend ->
-            for (i in start until end) {
-                if (!Character.UnicodeBlock.of(source[i])
-                        .equals(Character.UnicodeBlock.CYRILLIC)
-                ) {
-                    return@InputFilter ""
-                }
-            }
-            null
         })
     }
 
