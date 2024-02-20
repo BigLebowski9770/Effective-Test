@@ -1,4 +1,10 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_return_product">Возарат товара</string>
+    <string name="test_offer">Оферта</string>
+    <string name="text_feedback">Обратная связь</string>
+    <string name="text_stores">Магазины</string>
+    <string name="text_1">1</string>
+    <string name="text_product">товар</string>
 </resources>

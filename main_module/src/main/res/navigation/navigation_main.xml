@@ -23,5 +23,17 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.loves2spooge.feature_profile.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_favouritesFragment"
+            app:destination="@id/favouritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.loves2spooge.feature_profile.FavouritesFragment"
+        android:label="FavouritesFragment">
+        <action
+            android:id="@+id/action_favouritesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

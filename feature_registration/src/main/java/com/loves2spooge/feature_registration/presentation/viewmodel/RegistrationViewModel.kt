@@ -1,26 +1,11 @@
 package com.loves2spooge.feature_registration.presentation.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.loves2spooge.feature_registration.data.UserData
 import javax.inject.Inject
 import javax.inject.Provider
 
-class RegistrationViewModel @Inject constructor(): ViewModel() {
-
-    private val userData = MutableLiveData<UserData>()
-
-    fun setUserData(userFirstName: String, userLastName: String, userPhoneNumber: String) {
-        val data = UserData(userFirstName, userLastName, userPhoneNumber)
-        userData.value = data
-    }
-
-    fun getUserData(): LiveData<UserData> {
-        return userData
-    }
-}
+class RegistrationViewModel @Inject constructor(): ViewModel()
 
 class RegistrationViewModelFactory @Inject constructor(
     viewModelProvider: Provider<RegistrationViewModel>

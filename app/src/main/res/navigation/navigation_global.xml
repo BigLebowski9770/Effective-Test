@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.loves2spooge.feature_registration.presentation.fragmen.RegistrationFragment"
-        android:label="RegistrationFragment" >
+        android:label="RegistrationFragment">
         <action
             android:id="@+id/action_registrationFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -15,5 +15,9 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.loves2spooge.main_module.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
 </navigation>
