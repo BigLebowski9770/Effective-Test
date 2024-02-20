@@ -116,7 +116,6 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
             }
 
             override fun afterTextChanged(s: Editable?) {
-//                buttonInput.isClickable = text.toString().isNotBlank()
                 buttonInput.isEnabled = text.toString().isNotEmpty()
             }
         })
@@ -151,7 +150,6 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
             }
 
             override fun afterTextChanged(s: Editable?) {
-//                buttonInput.isClickable = number.toString().isNotBlank()
                 buttonInput.isEnabled = number.toString().isNotEmpty()
             }
         })
