@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/popularity"
+        android:title="@string/text_filter_pipular"/>
+    <item
+        android:id="@+id/priceLowToHigh"
+        android:title="@string/text_filter_minimum_price"/>
+    <item
+        android:id="@+id/priceHighToLow"
+        android:title="@string/text_filter_max_price"/>
+
+</menu>

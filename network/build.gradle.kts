@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.loves2spooge.feature_calatog"
+    namespace = "com.loves2spooge.network"
     compileSdk = 34
 
     defaultConfig {
@@ -35,22 +35,9 @@ android {
 
 dependencies {
 
-    implementation (project(":navigation"))
-
-    implementation (project(":core"))
-
     //Dagger2
     implementation ("com.google.dagger:dagger:2.48.1")
     kapt ("com.google.dagger:dagger-compiler:2.48.1")
-
-    //Retrofit
-    implementation ("com.google.code.gson:gson:2.8.9")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
-
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.2")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
