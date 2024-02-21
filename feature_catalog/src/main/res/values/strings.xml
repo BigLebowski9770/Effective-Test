@@ -1,4 +1,14 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_sort">Сортировка</string>
+    <string name="text_filter">Фильтры</string>
+    <string name="text_chip_view_all">Смотреть все</string>
+    <string name="text_chip_face">Лицо</string>
+    <string name="text_chip_body">Тело</string>
+    <string name="text_chip_tan">Загар</string>
+    <string name="text_chip_stores">Магазины</string>
+    <string name="text_filter_pipular">По популярности</string>
+    <string name="text_filter_minimum_price">По уменьшению цены</string>
+    <string name="text_filter_max_price">По возрастанию цены</string>
 </resources>

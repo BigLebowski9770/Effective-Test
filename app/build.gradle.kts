@@ -34,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -50,6 +54,16 @@ dependencies {
     implementation (project(":feature_registration"))
 
     implementation (project(":main_module"))
+
+    //Coroutines
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC2")
+
+    //Retrofit
+    implementation ("com.google.code.gson:gson:2.8.9")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
 
     //Dagger2
     implementation ("com.google.dagger:dagger:2.48.1")
