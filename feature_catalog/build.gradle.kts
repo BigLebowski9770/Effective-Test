@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -38,6 +42,10 @@ dependencies {
     implementation (project(":navigation"))
 
     implementation (project(":core"))
+
+    //Coroutines
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC2")
 
     //Dagger2
     implementation ("com.google.dagger:dagger:2.48.1")

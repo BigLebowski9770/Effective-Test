@@ -18,7 +18,7 @@ class NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://run.mocky.io/v3/97e721a7-0a66-4cae-b445-83cc0bcf9010")
+            .baseUrl("https://run.mocky.io/")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

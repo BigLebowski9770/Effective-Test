@@ -55,6 +55,10 @@ dependencies {
 
     implementation (project(":main_module"))
 
+    //Coroutines
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC2")
+
     //Retrofit
     implementation ("com.google.code.gson:gson:2.8.9")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")

@@ -6,6 +6,6 @@ import com.loves2spooge.feature_calatog.di.DaggerCatalogComponent
 
 internal class CatalogComponentViewModel : ViewModel() {
 
-    val catalogComponent =
-        DaggerCatalogComponent.builder().deps(CatalogDepsProvider.deps).build()
+        val catalogComponent =
+            DaggerCatalogComponent.builder().deps(CatalogDepsProvider.deps).build()
 }
