@@ -11,4 +11,6 @@
     <string name="text_filter_pipular">По популярности</string>
     <string name="text_filter_minimum_price">По уменьшению цены</string>
     <string name="text_filter_max_price">По возрастанию цены</string>
+    <string name="rub_symbol">₽</string>
+    <string name="percent_symbol">%</string>
 </resources>
