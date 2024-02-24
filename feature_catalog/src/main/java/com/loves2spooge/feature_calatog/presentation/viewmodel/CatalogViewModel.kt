@@ -1,33 +1,38 @@
 package com.loves2spooge.feature_calatog.presentation.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
-import com.loves2spooge.feature_calatog.network.api.ProductApi
 import com.loves2spooge.feature_calatog.network.data.Products
-import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import javax.inject.Inject
 import javax.inject.Provider
 
 class CatalogViewModel @Inject constructor(
-    val retrofit: Retrofit,
+    private val retrofit: Retrofit,
 ) : ViewModel() {
 
     private val _productList: MutableLiveData<Products> = MutableLiveData()
-    val productList: LiveData<Products> = _productList
+    val productList: LiveData<Products> get() = _productList
 
-    init {
-        val productApi = retrofit.create(ProductApi::class.java)
-        viewModelScope.launch {
-            val result = productApi.getProducts()
-            _productList.value = result
-            Log.d("TAG", result.toString())
-        }
-    }
+//    init {
+//        getProduct()
+//    }
+//
+//    fun getProduct() {
+//        val productApi = retrofit.create(ProductApi::class.java)
+//        viewModelScope.launch {
+//            runCatching {
+//                productApi.getProducts()
+//            }.onSuccess {
+//                _productList.postValue(it)
+//                Log.e("RequestSuccess", it.toString())
+//            }.onFailure {
+//                Log.e("RequestException", it.toString())
+//            }
+//        }
+//    }
 }
 
 class CatalogViewModelFactory @Inject constructor(
